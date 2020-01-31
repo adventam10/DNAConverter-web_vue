@@ -59,7 +59,6 @@ function convertToDNA(text) {
 
 function isInvalidDNA(text) {
   if (!text || text.length % 2 != 0) {
-    console.log("empty");
     return true;
   }
   var result = text.match(/[ATCG]/g);
