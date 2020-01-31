@@ -1,0 +1,74 @@
+@import "base";
+
+.contents{
+  margin: $space_m;
+}
+.radio-group {
+  align-items: center;
+  display: flex;
+  margin-bottom: $space_s;
+  margin-right: $space_s;
+  margin-top: $space_s;
+}
+.form-convert {
+  display: inline;
+}
+.text-area{
+  border-style: solid;
+  border-width : 1px;
+  box-sizing: border-box;
+  padding: $space_s;
+  height: 200px;
+  float: left;
+  width: 50%;
+  @include mq(tab) {
+    width: 100%;
+  }
+}
+.text-result{
+  overflow: scroll;
+  word-wrap: break-word;
+}
+.text-input{
+  border: none;
+  height: 100%;
+  padding: 0;
+  resize: none;
+  width: 100%;
+}
+.button-tweet{
+  background: transparent;
+  border: none;
+  float: right;
+  margin-top: $space_s;
+  padding: 0;
+  img {
+    width: $button-height;
+  }
+}
+.button-convert {
+  background-color: $color-light_accent;
+  @include color() {
+    background-color: $color-dark_accent;
+  }
+  border-style: none;
+  border-radius: 5px;
+  color: $color-text_white;
+  font-size: 14px;
+  height: $button-height;
+  margin-top: $space_s;
+  padding: $space_s $space_m;
+}
+.store-badge-area{
+  margin-bottom: $space_xl;
+  margin-left: calc(#{$space_m - $apple-badge-margin});
+  margin-right: calc(#{$space_m - $apple-badge-margin});
+  vertical-align: middle;
+  .apple-badge {
+    display: inline-block;
+    overflow: hidden;
+    height: 40px;
+    margin: $apple-badge-margin;
+    background-size: contain;
+  }
+}

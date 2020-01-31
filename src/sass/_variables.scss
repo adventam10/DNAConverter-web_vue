@@ -1,0 +1,55 @@
+/// カラー
+$color-light_base: #fff;
+$color-light_main: #333;
+$color-light_accent: #EF8303;
+
+$color-dark_base: #333;
+$color-dark_main: #1e1e1e;
+$color-dark_accent: #EF8303;
+
+$color-light-text_default: #4c4c4c;
+$color-dark-text_default: #f6f5f5;
+$color-text_white: #f6f5f5;
+
+/// 余白
+$space_s: 8px;
+$space_m: 16px;
+$space_l: 24px;
+$space_xl: 32px;
+
+/*====================
+{{スマホを基本設計にする}}
+ - 〜479px：SP縦
+ - 480px〜599px：SP横
+ - 600px〜959px：タブレット
+ - 960px〜1279px：小型PC
+ - 1280px〜：大型PC
+====================*/
+$breakpoints: (
+  'sm': 'screen and (max-width: 320px)',
+  'tab': 'screen and (max-width: 599px)',
+  'pc': 'screen and (max-width: 959px)',
+) !default;
+
+$color-mode: (
+  'light': '(prefers-color-scheme: light)',
+  'dark': '(prefers-color-scheme: dark)',
+) !default;
+
+// ==============================
+// mixin
+// ==============================
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin color($mode: dark) {
+  @media #{map-get($color-mode, $mode)} {
+    @content;
+  }
+}
+
+$button-height: 40px;
+$apple-badge-margin: 8px;

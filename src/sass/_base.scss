@@ -1,0 +1,76 @@
+@import "variables";
+@import "reset";
+
+body {
+  background-color: $color-light_base;
+  color: $color-light-text_default;
+  @include color() {
+    background-color: $color-dark_base;
+    color: $color-dark-text_default;
+  }
+}
+
+button, input, select, textarea {
+  font-family : inherit;
+  font-size : 100%;
+  background-color: $color-light_base;
+  color: $color-light-text_default;
+  @include color() {
+    background-color: $color-dark_base;
+    color: $color-dark-text_default;
+  }
+}
+
+.button {
+  cursor: pointer;
+}
+
+.header-footer {
+  background-color: $color-light_main;
+  @include color() {
+    background-color: $color-dark_main;
+  }
+  color: $color-text_white;
+  padding: $space_m;
+}
+
+@font-face{font-family:"IonIcons";src:url("//code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1");src:url("//code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"),url("//code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.ttf?v=2.0.1") format("truetype"),url("//code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.woff?v=2.0.1") format("woff"),url("//code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");font-weight:normal;font-style:normal}
+
+.label-radio input[type="radio"]{
+  display: none;
+}
+.label-radio{
+  cursor: pointer;
+  color: $color-light-text_default;
+  @include color() {
+    color: $color-dark-text_default;
+  }
+  padding-right: 15px;
+  font-weight: normal;
+}
+.label-radio .lever:before{
+  content:"\f3a6";
+  font-family: "IonIcons";
+  margin-right: 7px;
+  color: $color-light-text_default;
+  @include color() {
+    color: $color-dark-text_default;
+  }
+  font-size: 18px;
+  position: relative;
+  top: 2px;
+}
+.label-radio input[type="radio"]:checked + .lever{
+  color: $color-light_accent;
+  @include color() {
+    color: $color-dark_accent;
+  }
+}
+.label-radio input[type="radio"]:checked + .lever:before{
+  content:"\f3a7";
+  font-family: "IonIcons";
+  color: $color-light_accent;
+  @include color() {
+    color: $color-dark_accent;
+  }
+}
