@@ -2,7 +2,7 @@ const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/js/index.js',
   output: {
     filename: 'bundle.js',
@@ -26,5 +26,22 @@ module.exports = {
       alias: {
         vue: 'vue/dist/vue.esm.js'
       }
-    }
+    },
+    module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                '@babel/preset-env',
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
 };

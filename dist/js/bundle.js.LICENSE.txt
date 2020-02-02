@@ -1,0 +1,2297 @@
+/*
+ * not type checking this file because flow doesn't play well with
+ * dynamically accessing methods on Array prototype
+ */
+
+/*  */
+
+/* 0 */
+
+/* 1 */
+
+/* 2 */
+
+/* 3 */
+
+/* 4 */
+
+/* 5 */
+
+/* WEBPACK VAR INJECTION */
+
+/* asRootData */
+
+/* direct */
+
+/* eslint-disable no-proto */
+
+/* eslint-disable no-self-compare */
+
+/* eslint-disable no-unused-vars */
+
+/* eslint-enable no-proto */
+
+/* eslint-enable no-self-compare */
+
+/* eslint-enable no-unused-vars */
+
+/* getStatic */
+
+/* harmony default export */
+
+/* hydrating */
+
+/* isRenderWatcher */
+
+/* istanbul ignore else */
+
+/* istanbul ignore if */
+
+/* istanbul ignore next */
+
+/* istanbul ignore next, $flow-disable-line */
+
+/* removeOnly */
+
+/* true */
+
+/*!
+ * Vue.js v2.6.11
+ * (c) 2014-2019 Evan You
+ * Released under the MIT License.
+ */
+
+/*#__PURE__*/
+
+/**
+   * Check if a tag is an unknown element.
+   * Platform-dependent.
+   */
+
+/**
+   * Check if a tag is reserved so that it cannot be registered as a
+   * component. This is platform-dependent and may be overwritten.
+   */
+
+/**
+   * Check if an attribute is reserved so that it cannot be used as a component
+   * prop. This is platform-dependent and may be overwritten.
+   */
+
+/**
+   * Check if an attribute must be bound using property, e.g. value
+   * Platform-dependent.
+   */
+
+/**
+   * Class inheritance
+   */
+
+/**
+   * Create asset registration methods.
+   */
+
+/**
+   * Custom user key aliases for v-on
+   */
+
+/**
+   * Each instance constructor, including Vue, has a unique
+   * cid. This enables us to create wrapped "child
+   * constructors" for prototypal inheritance and cache them.
+   */
+
+/**
+   * Error handler for watcher errors
+   */
+
+/**
+   * Exposed for legacy reasons
+   */
+
+/**
+   * Get the namespace of an element
+   */
+
+/**
+   * Ignore certain custom elements
+   */
+
+/**
+   * Option merge strategies (used in core/util/options)
+   */
+
+/**
+   * Parse the real tag name for the specific platform.
+   */
+
+/**
+   * Perform updates asynchronously. Intended to be used by Vue Test Utils
+   * This will significantly reduce performance if set to false.
+   */
+
+/**
+   * Show production mode tip message on boot?
+   */
+
+/**
+   * Warn handler for watcher warns
+   */
+
+/**
+   * Whether to enable devtools
+   */
+
+/**
+   * Whether to record perf
+   */
+
+/**
+   * Whether to suppress warnings.
+   */
+
+/**
+ * A watcher parses an expression, collects dependencies,
+ * and fires callback when the expression value changes.
+ * This is used for both the $watch() api and directives.
+ */
+
+/**
+ * Add a dependency to this directive.
+ */
+
+/**
+ * Add class with compatibility for SVG since classList is not supported on
+ * SVG elements in IE
+ */
+
+/**
+ * Always return false.
+ */
+
+/**
+ * Assert whether a prop is valid.
+ */
+
+/**
+ * Assets
+ *
+ * When a vm is present (instance creation), we need to do
+ * a three-way merge between constructor options, instance
+ * options and parent options.
+ */
+
+/**
+ * Attempt to create an observer instance for a value,
+ * returns the new observer if successfully observed,
+ * or the existing observer if the value already has one.
+ */
+
+/**
+ * Augment a target Object or Array by defining
+ * hidden properties.
+ */
+
+/**
+ * Augment a target Object or Array by intercepting
+ * the prototype chain using __proto__
+ */
+
+/**
+ * Camelize a hyphen-delimited string.
+ */
+
+/**
+ * Check if a string starts with $ or _
+ */
+
+/**
+ * Check if a tag is a built-in tag.
+ */
+
+/**
+ * Check if an attribute is a reserved attribute.
+ */
+
+/**
+ * Check if two values are loosely equal - that is,
+ * if they are plain objects, do they have the same shape?
+ */
+
+/**
+ * Check if val is a valid array index.
+ */
+
+/**
+ * Check if value is primitive.
+ */
+
+/**
+ * Check whether an object has the property.
+ */
+
+/**
+ * Clean up for dependency collection.
+ */
+
+/**
+ * Collect dependencies on array elements when the array is touched, since
+ * we cannot intercept array element access like property getters.
+ */
+
+/**
+ * Convert HTML string to AST.
+ */
+
+/**
+ * Convert a value to a string that is actually rendered.
+ */
+
+/**
+ * Convert an Array-like object to a real Array.
+ */
+
+/**
+ * Convert an input value to a number for persistence.
+ * If the conversion fails, return original string.
+ */
+
+/**
+ * Create a cached version of a pure function.
+ */
+
+/**
+ * Cross-platform code generation for component v-model
+ */
+
+/**
+ * Cross-platform codegen helper for generating v-model value assignment code.
+ */
+
+/**
+ * Data
+ */
+
+/**
+ * Default strategy.
+ */
+
+/**
+ * Define a property.
+ */
+
+/**
+ * Define a reactive property on an Object.
+ */
+
+/**
+ * Delete a property and trigger change if necessary.
+ */
+
+/**
+ * Depend on all deps collected by this watcher.
+ */
+
+/**
+ * Ensure a function is called only once.
+ */
+
+/**
+ * Ensure all props option syntax are normalized into the
+ * Object-based format.
+ */
+
+/**
+ * Evaluate the getter, and re-collect dependencies.
+ */
+
+/**
+ * Evaluate the value of the watcher.
+ * This only gets called for lazy watchers.
+ */
+
+/**
+ * Flush both queues and run the watchers.
+ */
+
+/**
+ * Generate a string containing static keys from compiler modules.
+ */
+
+/**
+ * Get outerHTML of elements, taking care
+ * of SVG elements in IE as well.
+ */
+
+/**
+ * Get the default value of a prop.
+ */
+
+/**
+ * Get the raw type string of a value, e.g., [object Object].
+ */
+
+/**
+ * Goal of the optimizer: walk the generated template AST tree
+ * and detect sub-trees that are purely static, i.e. parts of
+ * the DOM that never needs to change.
+ *
+ * Once we detect these sub-trees, we can:
+ *
+ * 1. Hoist them into constants, so that we no longer need to
+ *    create fresh nodes for them on each re-render;
+ * 2. Completely skip them in the patching process.
+ */
+
+/**
+ * Helper that recursively merges two data objects together.
+ */
+
+/**
+ * Hooks and props are merged as arrays.
+ */
+
+/**
+ * In some cases we may want to disable observation inside a component's
+ * update computation.
+ */
+
+/**
+ * Intercept mutating methods and emit events
+ */
+
+/**
+ * Make a map and return a function for checking if a key
+ * is in that map.
+ */
+
+/**
+ * Merge an Array of Objects into a single Object.
+ */
+
+/**
+ * Merge two option objects into a new one.
+ * Core utility used in both instantiation and inheritance.
+ */
+
+/**
+ * Mix properties into target object.
+ */
+
+/**
+ * Normalize a transition hook's argument length. The hook may be:
+ * - a merged hook (invoker) with the original in .fns
+ * - a wrapped component method (check ._length)
+ * - a plain function (.length)
+ */
+
+/**
+ * Normalize all injections into Object-based format
+ */
+
+/**
+ * Normalize raw function directives into object format.
+ */
+
+/**
+ * Not type checking this file because flow doesn't like attaching
+ * properties to Elements.
+ */
+
+/**
+ * Observe a list of Array items.
+ */
+
+/**
+ * Observer class that is attached to each observed
+ * object. Once attached, the observer converts the target
+ * object's property keys into getter/setters that
+ * collect dependencies and dispatch updates.
+ */
+
+/**
+ * Option overwriting strategies are functions that handle
+ * how to merge a parent option value and a child option
+ * value into the final value.
+ */
+
+/**
+ * Options with restrictions
+ */
+
+/**
+ * Other object hashes.
+ */
+
+/**
+ * Parse a v-model expression into a base path and a final key segment.
+ * Handles both dot-path and possible square brackets.
+ *
+ * Possible cases:
+ *
+ * - test
+ * - test[key]
+ * - test[test1[key]]
+ * - test["a"][key]
+ * - xxx.test[a[a].test1[key]]
+ * - test.xxx.a["asa"][test1[key]]
+ *
+ */
+
+/**
+ * Parse simple path.
+ */
+
+/**
+ * Perform no operation.
+ * Stubbing args to make Flow happy without leaving useless transpiled code
+ * with ...rest (https://flow.org/blog/2017/05/07/Strict-Function-Call-Arity/).
+ */
+
+/**
+ * Push a watcher into the watcher queue.
+ * Jobs with duplicate IDs will be skipped unless it's
+ * pushed when the queue is being flushed.
+ */
+
+/**
+ * Query an element selector if it's not an element already.
+ */
+
+/**
+ * Queue a kept-alive component that was activated during patch.
+ * The queue will be processed after the entire tree has been patched.
+ */
+
+/**
+ * Quick object check - this is primarily used to tell
+ * Objects from primitive values when we know the value
+ * is a JSON-compliant type.
+ */
+
+/**
+ * Recursively traverse an object to evoke all converted
+ * getters, so that every nested property inside the object
+ * is collected as a "deep" dependency.
+ */
+
+/**
+ * Remove an item from an array.
+ */
+
+/**
+ * Remove class with compatibility for SVG since classList is not supported on
+ * SVG elements in IE
+ */
+
+/**
+ * Remove self from all dependencies' subscriber list.
+ */
+
+/**
+ * Resolve an asset.
+ * This function is used because child instances need access
+ * to assets defined in its ancestor chain.
+ */
+
+/**
+ * Return the first index at which a loosely equal value can be
+ * found in the array (if value is a plain object, the array must
+ * contain an object of the same shape), or -1 if it is not present.
+ */
+
+/**
+ * Return the same value.
+ */
+
+/**
+ * Runtime helper for checking keyCodes from config.
+ * exposed as Vue.prototype._k
+ * passing in eventKeyName as last argument separately for backwards compat
+ */
+
+/**
+ * Runtime helper for merging v-bind="object" into a VNode's data.
+ */
+
+/**
+ * Runtime helper for rendering <slot>
+ */
+
+/**
+ * Runtime helper for rendering static trees.
+ */
+
+/**
+ * Runtime helper for rendering v-for lists.
+ */
+
+/**
+ * Runtime helper for resolving filters
+ */
+
+/**
+ * Runtime helper for resolving raw children VNodes into a slot object.
+ */
+
+/**
+ * Runtime helper for v-once.
+ * Effectively it means marking the node as static with a unique key.
+ */
+
+/**
+ * Scheduler job interface.
+ * Will be called by the scheduler.
+ */
+
+/**
+ * Set a property on an object. Adds the new property and
+ * triggers change notification if the property doesn't
+ * already exist.
+ */
+
+/**
+ * Simple bind polyfill for environments that do not support it,
+ * e.g., PhantomJS 1.x. Technically, we don't need this anymore
+ * since native bind is now performant enough in most browsers.
+ * But removing it would mean breaking code that was able to run in
+ * PhantomJS 1.x, so this must be kept for backward compatibility.
+ */
+
+/**
+ * Strict object type check. Only returns true
+ * for plain JavaScript objects.
+ */
+
+/**
+ * Subscriber interface.
+ * Will be called when a dependency changes.
+ */
+
+/**
+ * Use function string name to check built-in types,
+ * because a simple equality check will fail when running
+ * across different vms / iframes.
+ */
+
+/**
+ * Validate component names
+ */
+
+/**
+ * Virtual DOM patching algorithm based on Snabbdom by
+ * Simon Friis Vindum (@paldepind)
+ * Licensed under the MIT License
+ * https://github.com/paldepind/snabbdom/blob/master/LICENSE
+ *
+ * modified by Evan You (@yyx990803)
+ *
+ * Not type-checking this because this file is perf-critical and the cost
+ * of making flow understand it is not worth it.
+ */
+
+/**
+ * Walk through all properties and convert them into
+ * getter/setters. This method should only be called when
+ * value type is Object.
+ */
+
+/**
+ * Watchers.
+ *
+ * Watchers hashes should not overwrite one
+ * another, so we merge them as arrays.
+ */
+
+/**
+ * parent component style should be after child's
+ * so that parent component's style could override it
+ */
+
+/************************************************************************/
+
+/******/
+
+/***/
+
+/*@__PURE__*/
+
+//
+
+//    created before the child)
+
+//    its watchers can be skipped.
+
+//    user watchers are created before the render watcher)
+
+//  nested
+
+// "
+
+// "$stable" marker.
+
+// "force" the microtask queue to be flushed by adding an empty timer.
+
+// "too much recursion" error.
+
+// "touch" every property so they are all tracked as
+
+// #3663: IE encodes newlines inside attribute values while other browsers don't
+
+// #3895, #4268
+
+// #4391: in IE9, setting type can reset value for input[type=radio]
+
+// #6157
+
+// #6513
+
+// #6574 in case the inject object is observed...
+
+// #6601 work around Chrome version <= 55 bug where single textNode
+
+// #6666: IE/Edge forces progress value down to 1 before setting a max
+
+// #6828: chrome encodes content in a[href]
+
+// #6887 firefox doesn't update muted state if set via attribute
+
+// #6903
+
+// #7138: IE10 & 11 fires input event when setting placeholder on
+
+// #7573 disable dep collection when invoking data getters
+
+// #7573 disable dep collection when invoking lifecycle hooks
+
+// #7806: IE11 uses key names without `Arrow` prefix for arrow keys.
+
+// #7817 clone node before setting fnContext, otherwise if the node is reused
+
+// #7880: IE11 and Edge use `Esc` for Escape key name.
+
+// #7975
+
+// #9112: IE11 uses `Del` for Delete key name.
+
+// #9112: IE11 uses `Spacebar` for Space key name.
+
+// #9438, #9506
+
+// #9441: can't use 'keyCode' in $event because Chrome autofill fires fake
+
+// #9446: Firefox <= 53 (in particular, ESR 52) has incorrect Event.timeStamp
+
+// #9448 bail if event is fired in another document in a multi-page
+
+// #9462 iOS 9 bug: event.timeStamp is 0 after history.pushState
+
+// #9534: if a component with scoped slots is inside a conditional branch,
+
+// #9681 QtWebEngine event.timeStamp is negative value
+
+// $attrs & $listeners are exposed for easier HOC creation.
+
+// $flow-disable-line
+
+// '
+
+// (
+
+// (#6466 MutationObserver is unreliable in IE11)
+
+// () => Promise
+
+// (async resolves are shimmed as synchronous during SSR)
+
+// (e.g. #6813, out-in transitions).
+
+// (e.g. it was from a cached normal slot) the fnContext causes named slots
+
+// (relative to UNIX epoch), so in order to compare time we have to use the
+
+// )
+
+// /
+
+// 0: no normalization needed
+
+// 1. Components are updated from parent to child. (because parent is always
+
+// 1. When the children contains components - because a functional component
+
+// 1. components not able to mutate slot nodes
+
+// 16進文字列をバイト値に変換
+
+// 16進文字列を文字列に変換
+
+// 1: simple normalization needed (possible 1-level deep nested array)
+
+// 2. A component's user watchers are run before its render watcher (because
+
+// 2. When the children contains constructs that always generated nested Arrays,
+
+// 2. add radio else-if condition
+
+// 2. static slot content fails for hot-reloading
+
+// 2.6 explicit observable API
+
+// 2.6 v-slot syntax
+
+// 2: full normalization needed
+
+// 3. If a component is destroyed during a parent component's watcher run,
+
+// 3. other
+
+// :class are used on slot nodes
+
+// < in plain text, be forgiving and treat it as text
+
+// <textarea>... block the first input event and remove the blocker
+
+// A major drawback of this tradeoff is that there are some scenarios
+
+// AFTER it was attached.
+
+// All IE versions use low-res event timestamps, and have problematic clock
+
+// Also, using (macro) tasks in event handler would cause some weird behaviors
+
+// Apply extends and mixins on the child options,
+
+// Async edge case #6566 requires saving the timestamp when event listeners are
+
+// Async edge case fix requires storing an event listener's attach timestamp.
+
+// Browser environment sniffing
+
+// By default it does NOT remove it from the map (attrsMap) because the map is
+
+// CONCATENATED MODULE: ./src/js/dna-converter.js
+
+// CONCATENATED MODULE: ./src/js/index.js
+
+// CONCATENATED MODULE: ./src/js/string-converter.js
+
+// CSS transitions. Since the element may be inside an entering
+
+// Callback can either be a function or a string
+
+// Check if module is in cache
+
+// Clean up any remaining tags
+
+// Close all the open elements, up the stack
+
+// Comment:
+
+// Copy function arguments
+
+// Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
+
+// Create a new module (and put it into the cache)
+
+// DEPRECATED: alias for componentInstance for backwards compat.
+
+// DOM APIs, for completeness
+
+// DOM props
+
+// Deactivate deps tracking while processing error handler to avoid possible infinite rendering.
+
+// Deep watchers and watchers on Object/Arrays should fire even
+
+// Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7 it generated a
+
+// Detect whether an element with the move class applied has
+
+// Determine what event timestamp the browser is using. Annoyingly, the
+
+// Doctype:
+
+// Does not start the time, just sets up the members needed.
+
+// Don't get fooled by e.g. browserify environments.
+
+// During updates, a kept-alive component's child components may
+
+// EXTERNAL MODULE: ./node_modules/vue/dist/vue.esm.js
+
+// End tag:
+
+// Execute the module function
+
+// Fallback to setImmediate.
+
+// Find the closest opened tag of the same type
+
+// Fix https://github.com/vuejs/vue/pull/7730
+
+// Flag the module as loaded
+
+// For IE 6–8
+
+// For a node to qualify as a static root, it should have children that
+
+// For non-IE10 modern browsers
+
+// For plain HTML markup, normalization can be completely skipped because the
+
+// For props and computed properties, we define the proxy getters on
+
+// For web workers, where supported
+
+// From the spec: "Wait until any invocations of this algorithm started before this one have completed."
+
+// Here we have async deferring wrappers using microtasks.
+
+// Here we just export a default compiler using the default parts.
+
+// However, it has subtle problems when state is changed right before repaint
+
+// IE doesn't support innerHTML for SVG elements
+
+// IE input[type=range] only supports `change` event
+
+// IE textarea placeholder bug
+
+// If comma is not replaced with a dot, the input will be rounded down (i.e. acting
+
+// If no tag name is provided, clean shop
+
+// In 2.5 we used (macro) tasks (in combination with microtasks).
+
+// In problematic UIWebViews, Promise.then doesn't completely break, but
+
+// JSDOM may return undefined for transition properties
+
+// Load entry module and return exports
+
+// Make sure modifiers like prevent and stop get executed after key filtering
+
+// Make sure we're not in a plaintext content element like script/style
+
+// MutationObserver has wider support, however it is seriously bugged in
+
+// NOTE: these are not considered part of the public API - avoid relying on
+
+// New element
+
+// Note: style is excluded because it relies on initial clone for future
+
+// Note: this is a browser-only function so we can assume elms are DOM nodes.
+
+// OR when it is inside another scoped slot or v-for (the reactivity may be
+
+// Object.prototype.hasOwnProperty.call
+
+// Old versions of Chromium (below 61.0.3163.100) formats floating pointer numbers
+
+// On some exotic environments, it's not clear which object `setimmediate` was
+
+// Only merged options has the _base property.
+
+// PhantomJS and iOS 7.x
+
+// Prefixed last, checked first
+
+// Promise is available, we will use it:
+
+// Remove the open elements from the stack
+
+// Return the exports of the module
+
+// Reuse variable
+
+// Safari < 10.2 & UIWebView doesn't fire compositionend when
+
+// See: https://github.com/vuejs/vuex/issues/1505
+
+// Set them one by one, and the browser will only set those it can recognize
+
+// So if we're currently running a task, we'll need to delay this invocation.
+
+// So we now use microtasks everywhere, again.
+
+// Some elements (templates) need to behave differently inside of a v-pre
+
+// Some versions of I.E. have different rules for clearTimeout vs setTimeout
+
+// Sort queue before flush.
+
+// Spec says greater than zero
+
+// Start tag:
+
+// Store and register the task
+
+// Support values array created by autoprefixer, e.g.
+
+// TODO: this can be further optimized by properly analyzing in-scope bindings
+
+// Technically it leverages the (macro) task queue,
+
+// Text node
+
+// The current target watcher being evaluated.
+
+// The module cache
+
+// The nextTick behavior leverages the microtask queue, which can be accessed
+
+// The require function
+
+// The template compiler attempts to minimize the need for normalization by
+
+// The test against `importScripts` prevents this implementation from being installed inside a web worker,
+
+// There's no need to maintain a stack because all render fns are called
+
+// These helpers produce better VM code in JS engines due to their
+
+// This  #4521 by skipping the unnecesarry `checked` update.
+
+// This ensures that:
+
+// This is globally unique because only one watcher
+
+// This vnode was used in a previous render!
+
+// This was originally intended to fix #4521 but no longer necessary
+
+// This works if eval is allowed (see CSP)
+
+// This works if the window reference is available
+
+// This works in non-strict mode
+
+// UIWebView in iOS >= 9.3.3 when triggered in touch event handlers. It
+
+// Use MutationObserver where native Promise is not available,
+
+// Vnode moved left
+
+// Vnode moved right
+
+// Vue.prototype.__patch__ is injected in entry points
+
+// We return undefined, instead of nothing here, so it's
+
+// When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+
+// When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+
+// [
+
+// ]
+
+// __webpack_public_path__
+
+// _f: resolveFilter
+
+// `
+
+// `createCompilerCreator` allows creating compilers that use alternative
+
+// `setimmediate` library.
+
+// `value` is handled separately because the DOM value may be temporarily
+
+// a child.
+
+// a flag to avoid this being observed
+
+// a reactivated keep-alive component doesn't insert itself
+
+// a successful hydration.
+
+// a uid
+
+// a value is Function if its prototype is function even across different execution context
+
+// able to install onto.  Search each possibility in the same order as the
+
+// abstract components do not keep anything
+
+// add a raw attr (use this in preTransforms)
+
+// add the component's children to its default slot
+
+// adding anyting as a sibling to the root node is forbidden
+
+// additional parameters
+
+// after 2.5. Keeping it for backwards compat with generated code from < 2.4
+
+// after calling the init hook, if the vnode is a child component
+
+// again. It's not ideal to involve module-specific logic in here but
+
+// all
+
+// all other transition classes applied to ensure only the move class
+
+// allow further extension/mixin/plugin usage
+
+// allow root elements with v-if, v-else-if and v-else
+
+// allow v-model="obj.val " (trailing whitespace)
+
+// already a merged invoker
+
+// already pending
+
+// and is always a fresh object, so it's safe to merge into it
+
+// and prevent memory leak
+
+// and skip force updating ones that do not actually use scope variables.
+
+// and the handler would only fire if the event passed to it was fired
+
+// and we need to use the hi-res version for event listener timestamps as
+
+// and when that is passed down this would cause an error
+
+// apply post-transforms
+
+// apply pre-transforms
+
+// apply transition data to child
+
+// are already rendered on the client or has no need for initialization
+
+// are not just static text. Otherwise the cost of hoisting out will
+
+// args order: tag, data, children, normalizationType, alwaysNormalize
+
+// array of events
+
+// as a comment node but preserves all the raw information for the node.
+
+// as a floor function) causing unexpected behaviors
+
+// as these will throw away existing DOM nodes and cause removal errors
+
+// as we run existing watchers
+
+// assert node match
+
+// assign to this to avoid being removed in tree-shaking
+
+// associated DOM element for it.
+
+// async component
+
+// async edge case #6566: inner click event triggers patch, event handler
+
+// at instantiation here.
+
+// attached during that flush.
+
+// attached to outer element during patch, and triggered again. This
+
+// attached. However, calling performance.now() has a perf overhead especially
+
+// attributes
+
+// attributes that should be using props for binding
+
+// avoid catch triggering multiple times when nested calls
+
+// avoid recursion
+
+// avoid resetting cursor position when value is the same
+
+// avoids Object.defineProperty calls for each instance created.
+
+// avoriaz seems to mock a non-extensible $scopedSlots object
+
+// bail for environments that have buggy event.timeStamp implementations
+
+// based on the rendering backend used.
+
+// basic support for MathML
+
+// be processed after the whole patch process ended.
+
+// because functional components already normalize their own children.
+
+// been updated.
+
+// bind the createElement fn to this instance
+
+// binding to window is necessary to make hot reload work in IE in strict mode
+
+// boolean has higher priority
+
+// but Flash expects a value of "true" when used on <embed> tag
+
+// but in some cases we have to bail-out of this optimization
+
+// but it is still a better choice than setTimeout.
+
+// but only if it is a raw options object that isn't
+
+// by default scoped slots are considered "stable", this allows child
+
+// cache constructor
+
+// cache original method
+
+// cache resolved
+
+// cached from whatever global is present so that test runners that stub it
+
+// call component updated and activated hooks
+
+// call enter callback now
+
+// call factory function for non-Function types
+
+// call leave callback now
+
+// call the last hook...
+
+// can be evaluated at a time.
+
+// can have their private assets too.
+
+// can we use __proto__?
+
+// cater for pre-defined getter/setters
+
+// certain weird environments...
+
+// change, so directly walking the tree here may call activated hooks
+
+// check cache
+
+// check capture modifier
+
+// check compilation errors/tips
+
+// check default value
+
+// check if there are any late-modified/attached options (#4976)
+
+// check if there are dynamic scopedSlots (hand-written or compiled but with
+
+// check if this is server-rendered content and if we can perform
+
+// check inline-template render functions
+
+// check local registration variations first
+
+// check namespace.
+
+// check pattern
+
+// check platforms/web/util/attrs.js acceptValue
+
+// check pre state
+
+// child component listeners instead of DOM listeners
+
+// child component. it should have hydrated its own tree.
+
+// clone children array to avoid mutating original in case of cloning
+
+// clone observed objects, as the user probably wants to mutate it
+
+// clone reused vnode
+
+// comments should still be allowed, but ignored
+
+// compile
+
+// compile-time directive that manipulates AST.
+
+// compiled as a scoped slot, render fn users would expect it to be present
+
+// compiled slot content. To avoid that, we generate a unique key based on
+
+// completely stops working after triggering a few times... so, if native
+
+// component also has set the placeholder vnode's elm.
+
+// component constructor creation
+
+// component instance. This key will be used to remove pending leaving nodes
+
+// component itself.
+
+// component or element
+
+// component prototype. We only need to define computed properties defined
+
+// component v-model
+
+// component v-model doesn't need extra runtime
+
+// component's mounted hook), which relies on vm._watcher being already defined
+
+// component-defined computed properties are already defined on the
+
+// componentName is el.component, take it as argument to shun flow's pessimistic refinement
+
+// components with in Weex's multi-instance scenarios.
+
+// components with only scoped slots to skip forced updates from parent.
+
+// computed properties are just getters during SSR
+
+// condense consecutive whitespaces into single space
+
+// config
+
+// convert primitive to vnode
+
+// copy other options
+
+// create a fake namespace object
+
+// create an empty node and replace it
+
+// create asset registers, so extended classes
+
+// create internal watcher for the computed property.
+
+// create new node
+
+// deep updates (#7063).
+
+// default key for nested array children (likely generated by v-for)
+
+// define __esModule on exports
+
+// define getter function for harmony exports
+
+// delay insert hooks for component root nodes, invoke them after the
+
+// dependencies for deep watching
+
+// destroy old node
+
+// detect devtools
+
+// detect such cases and filter out values that no longer has a matching
+
+// determine the normalization needed for the children array.
+
+// determine whether component has slot children
+
+// determine whether this is a plain element after
+
+// devtool hook
+
+// devtools global hook
+
+// direct component options / constructor
+
+// directives first.
+
+// directives may mutate the el's other properties before they are generated.
+
+// directly removing
+
+// disconnected due to the intermediate scope variable)
+
+// do not cache length because more watchers might be pushed
+
+// do not log it twice
+
+// do not make component slot content static. this avoids
+
+// does not trigger because the inner node's created hooks are not called
+
+// doesn't get processed by processAttrs.
+
+// doing this because it's faster than dynamic enumeration.
+
+// don't break things.  But we need to wrap it in a try catch in case it is
+
+// during Vue.extend(). We only need to proxy props defined at
+
+// during entering.
+
+// during template compilation
+
+// dynamic slot names). Static scoped slots compiled from template has the
+
+// e.g. <option disabled>Select one</option>
+
+// e.g. <template slot="xxx">, <div slot-scope="xxx">
+
+// e.g. <template>, <slot>, v-for, or when the children is provided by user
+
+// e.g. PhantomJS, iOS7, Android 4.4
+
+// e.g. `value` on <progress> w/ non-finite value
+
+// e.g. for directives that uses the "inserted" hook.
+
+// easier to handle this case. if(!global) { ...}
+
+// either not server-rendered, or hydration failed.
+
+// electron/nw.js app, since event.timeStamp will be using a different
+
+// element is really inserted
+
+// element may have already been removed due to v-html / v-text
+
+// empty component root.
+
+// empty element, allow client to pick up and populate children
+
+// empty mount (likely as component), create new root element
+
+// empty string to avoid regexp issues
+
+// enable recursive self-lookup
+
+// ensure a key that is unique to the vnode type and to this transition
+
+// ensure collecting deps for deep class bindings for future updates
+
+// ensure only append when value is already string, otherwise it will be cast
+
+// ensure runtime directive metadata
+
+// essentially merged when rendered to HTML strings
+
+// even immediately after element creation
+
+// event handlers
+
+// event is fired after handler attachment
+
+// events.
+
+// every time the scheduler flushes and use that for all event listeners
+
+// except for inputs with v-bind:type
+
+// excluded
+
+// existing directive, update
+
+// existing plain hook
+
+// explicitness and function inlining.
+
+// expose FunctionalRenderContext for ssr runtime helper installation
+
+// expose normal slots on scopedSlots
+
+// expose real self
+
+// expose the module cache
+
+// expose the modules object (__webpack_modules__)
+
+// exposed util methods.
+
+// exposing $options for renderStatic()
+
+// expression
+
+// extract listeners and pass them directly to the transition methods
+
+// extract listeners, since these needs to be treated as
+
+// extract props
+
+// extremely rare edge case: do not insert if old element is in a
+
+// fallback to prototype chain
+
+// false or null will remove the attribute but undefined will not
+
+// fast path 1: child component re-render only, parent did not change
+
+// fast path 2: stable scoped slots w/ no normal slots to proxy,
+
+// filter out scoped slots
+
+// filter out text nodes (possible whitespaces)
+
+// final children cleanup
+
+// find first non-whitespace prev char
+
+// find it as the prev node.
+
+// fire destroyed hook
+
+// fires "change" instead of "input" on autocomplete.
+
+// first filter, end of expression
+
+// first pass: mark all non-static nodes.
+
+// flow complains about extra args which is why we use any
+
+// flow somehow has problems with directly declared definition object
+
+// for example if the slot contains dynamic names, has v-if or v-for on them...
+
+// for lazy watchers
+
+// for script (e.g. type="x/template") or style, do not decode content
+
+// for slot content they should also get the scopeId from the host instance.
+
+// for transition enter check
+
+// force reflow to put everything in position
+
+// force removing pass
+
+// frozen object may not have observer.
+
+// function because try/catches deoptimize in certain engines.
+
+// functional component
+
+// g can still be undefined, but nothing to do about it...
+
+// generated render function is guaranteed to return Array<VNode>. There are
+
+// getDefaultExport function for compatibility with non-harmony modules
+
+// hack for #4339: a reactivated component with inner transition
+
+// handle <slot/> outlets
+
+// handle IE svg bug
+
+// handle content being passed to a component as slot,
+
+// handle transition classes
+
+// handle transition mode
+
+// handler w/ dynamic event name
+
+// happens because browsers fire microtask ticks between event propagation.
+
+// has new static slots
+
+// has old static slots
+
+// have mutated.
+
+// helper to dynamically append modifier runtime markers to event names.
+
+// helpers
+
+// hoist static sub-trees out
+
+// http://en.wikipedia.org/wiki/Conditional_comment#Downlevel-revealed_conditional_comment
+
+// http://www.matts411.com/post/internet-explorer-9-oninput/
+
+// https://github.com/facebook/flow/issues/285
+
+// hydrating
+
+// ie9 setting to null has no effect, must use empty string
+
+// if already flushing, splice the watcher based on its id
+
+// if already past its id, it will be run next immediately.
+
+// if at this stage it's not a constructor or an async component factory,
+
+// if childNode is not null, it means the actual childNodes list is
+
+// if clearTimeout wasn't available but was latter defined
+
+// if has already-rendered static tree and not inside v-for,
+
+// if parent is an HOC, update its $el as well
+
+// if setTimeout wasn't available but was latter defined
+
+// if the event timestamp, although evaluated AFTER the Date.now(), is
+
+// if the new node is not cloned it means the render functions have been
+
+// if the page has thousands of event listeners. Instead, we take a timestamp
+
+// if the returned array contains only a single node, allow it
+
+// if the user intentionally throws the original error in the handler,
+
+// if the vm is being destroyed.
+
+// if this is a component root node and the component's
+
+// ignore children if the node has textContent or innerHTML,
+
+// ignore slots that contains only whitespace
+
+// immediately.
+
+// implementation and does not fire microtasks in between event propagation, so
+
+// implementations (#9632)
+
+// important for dynamic transitions!
+
+// important: remove merged hook to ensure it's called only once
+
+// in a Vue.extend merge, both should be functions
+
+// in a locale-dependent way, using a comma instead of a dot.
+
+// in case of component :is set to falsy value
+
+// in case the child is also an abstract component, e.g. <keep-alive>
+
+// in case the object is already observed...
+
+// in case the options rendered by v-for have changed,
+
+// in each iteration - which helps prevent layout thrashing.
+
+// in some cases, the event used has to be determined at runtime
+
+// in that case we can just return the element and be done.
+
+// in this case we want to make sure we are able to get a hold to the
+
+// increase the listeners count
+
+// inherit parent ns if there is one
+
+// init parent attached events
+
+// inject is :any because flow is not smart enough to figure out cached
+
+// injected by v-model runtime
+
+// inline hooks to be invoked on component VNodes during patch
+
+// inline-template
+
+// install component management hooks onto the placeholder node
+
+// install platform patch function
+
+// install platform runtime directives & components
+
+// install platform specific utils
+
+// install runtime convenience helpers
+
+// instance merge
+
+// instantiation here.
+
+// instead of a hash lookup
+
+// internal component options needs special treatment.
+
+// internal version is used by render functions compiled from templates
+
+// into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
+
+// invoke callbacks only if this is not a synchronous resolve
+
+// invoke destroy hooks on current rendered tree
+
+// invoke insert hooks that may have been merged by create hooks.
+
+// is applied.
+
+// is needed to cater to all possible types of children values.
+
+// issue #9511
+
+// it can get stuck in a weird state where callbacks are pushed into the
+
+// it should've created a child instance and mounted it. the child
+
+// it's important to place the event as the first in the array because
+
+// it's possible for the same component to be reused but with different
+
+// it's possible that the value is out-of-sync with the rendered options.
+
+// iterate and compare children lists
+
+// keep a copy of raw propsData
+
+// keep a reference to the super options at extension time.
+
+// keep copies of post queues before resetting state
+
+// keep it in the children list so that v-else(-if) conditions can
+
+// keep-alive + HOCs. (#4590)
+
+// kept-alive components, treat as a patch
+
+// key
+
+// key events that do not have keyCode property...
+
+// later at instantiation we can check if Super's options have
+
+// leaving transition. Only happens when combining transition +
+
+// left/right
+
+// list of modules that can skip create hook during hydration because they
+
+// locate first non-abstract parent
+
+// longer than the virtual children list.
+
+// make current key freshest
+
+// make sure the key filters only apply to KeyboardEvents
+
+// make sure to clone it if it's reactive, since the user likely wants
+
+// make sure to invoke the insert hook
+
+// make sure to observe it.
+
+// manually mounted instance, call mounted on self
+
+// mark el non-plain so data gets generated
+
+// mark element as dynamic
+
+// mark the event as captured
+
+// mark v-show
+
+// marker for reverse proxying v-slot without scope on this.$slots
+
+// may return an Array instead of a single root. In this case, just a simple
+
+// merge adjacent text nodes
+
+// merge custom directives
+
+// merge custom modules
+
+// merge helper so that class/style/mustUseProp attrs are handled correctly.
+
+// merge options
+
+// merge static and dynamic style data on the same vnode
+
+// microtask queue but the queue isn't being flushed, until the browser
+
+// mode & 1: value is a module id, require it
+
+// mode & 2: merge all properties of value into the ns
+
+// mode & 4: return value when already ns object
+
+// mode & 8|1: behave like require
+
+// modifiers
+
+// module data generation functions
+
+// module transforms
+
+// mounted is called for render-created child components in its inserted hook
+
+// mounting to a real element
+
+// multiple renders, cloning them avoids errors when DOM manipulations rely
+
+// named slots should only be respected if the vnode was rendered in the
+
+// necessary to ensure parent re-render when deep bindings like :style and
+
+// need to resolve new options.
+
+// needed during codegen.
+
+// needs to do some other work, e.g. handle a timer. Therefore we can
+
+// new directive, bind
+
+// new parent vnode
+
+// no bubbling, should always fire.
+
+// no default, return undefined
+
+// no existing hook
+
+// no longer present, unbind
+
+// node.  All pre nodes are static roots, so we can use this as a location to
+
+// non root node in pre blocks with no attributes
+
+// non-string values will be stringified
+
+// normal directives
+
+// normalization is always applied for the public version, used in
+
+// normalization is needed - if any child is an Array, we flatten the whole
+
+// normalize click.right and click.middle since they don't actually fire
+
+// normalize possible array / string values into Object
+
+// normalize v-model event tokens that can only be determined at runtime.
+
+// not a built-in
+
+// not equal to the updated value
+
+// not included
+
+// note it doesn't support other MathML elements being component roots
+
+// note we only do this if the vnode is cloned -
+
+// note: this only removes the attr from the Array (attrsList) so that it
+
+// notify change
+
+// now it's used as a new node, overwriting its elm would cause
+
+// object syntax in v-bind
+
+// observe data
+
+// of going through the normal attribute patching process.
+
+// on incorrect children. Instead we push them into a queue which will
+
+// on subsequent patches (#3360)
+
+// on their elm reference.
+
+// on this.$slots because the usage is semantically a normal slot.
+
+// only cast empty string / same name to boolean if
+
+// only for non-scoped slots
+
+// only for non-scoped slots.
+
+// only need to normalize once
+
+// only used in dev mode
+
+// optimize hook:event cost by using a boolean flag marked at registration
+
+// optimize internal component instantiation
+
+// optimize single v-for
+
+// optimized shallow clone
+
+// option in the DOM.
+
+// options
+
+// or even between bubbling of the same event (#6566).
+
+// other than props & listeners & slot
+
+// otherwise, render a fresh tree.
+
+// out of sync with VDOM state due to focus, composition and modifiers.
+
+// outweigh the benefits and it's better off to just always render it fresh.
+
+// parent container node also has transition, skip.
+
+// parse arg
+
+// parse expression for getter
+
+// parser/optimizer/codegen, e.g the SSR optimizing compiler.
+
+// patch existing root node
+
+// pipe
+
+// plain options object: turn it into a constructor
+
+// pop stack
+
+// potential patch errors down the road when it's used as an insertion
+
+// pre
+
+// pre-resolve slots for renderSlot()
+
+// preserve slot as an attribute for native shadow DOM compat
+
+// prevent it from double-processed
+
+// prevent triggering an input event for no reason
+
+// process for on the main node
+
+// prop and event handler respectively.
+
+// props
+
+// proxy data on instance
+
+// prune oldest entry
+
+// public mount method
+
+// push text token
+
+// queue the flush
+
+// real context instance.
+
+// record leaving element
+
+// record original tag name for components using "is" attribute
+
+// recursively invoke hooks on child component root node
+
+// recursively search for possible transition defined inside the component root
+
+// ref
+
+// ref #5318
+
+// reference node. Instead, we clone the node on-demand before creating
+
+// reject.
+
+// release circular reference (#6759)
+
+// rely on checking whether it's in an inactive tree (e.g. router-view)
+
+// remove __vue__ reference
+
+// remove children as they are returned from scopedSlots now
+
+// remove pending leave element on enter by injecting an insert hook
+
+// remove reference from data ob
+
+// remove self from parent
+
+// remove self from vm's watcher list
+
+// remove slot attribute if the node is resolved as a Vue slot node
+
+// remove trailing whitespace node
+
+// remove trailing whitespace node again
+
+// removing structural attributes
+
+// replace old child transition data with fresh one
+
+// replace with listeners with .native modifier
+
+// replaced by innerHTML/textContent retains its parentNode property
+
+// replacing existing element
+
+// reset by the hot-reload-api and we need to do a proper re-render.
+
+// resolve constructor options in case global mixins are applied after
+
+// resolve injections before data/props
+
+// resolve provide after data/props
+
+// resolve slots + force update if has children
+
+// resolve template/el and convert to render function
+
+// return a placeholder node for async component, which is rendered
+
+// return a placeholder vnode
+
+// return empty vnode in case the render function errored out
+
+// return handler return value for single handlers
+
+// return in case resolved synchronously
+
+// return placeholder node and queue update when leave finishes
+
+// return previous default value to avoid unnecessary watcher trigger
+
+// return true when textbox (.number and .trim) loses focus and its value is
+
+// returns true if it also needs a runtime counterpart.
+
+// reuse element for static trees.
+
+// root instance props should be converted
+
+// safe to exclude.
+
+// same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+
+// same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+
+// same context.
+
+// same key but different element. treat as new element
+
+// same timestamp type when saving the flush timestamp.
+
+// save current target element in closure
+
+// scoped slot
+
+// scoped slots
+
+// second pass: mark static roots.
+
+// see flow/vnode
+
+// separately from one another. Nested component's render fns are called
+
+// sequential events (e.g. #4521, #6690, which have workarounds)
+
+// set attribute for blank value
+
+// set new value
+
+// set parent
+
+// set parent vnode. this allows render functions to have access
+
+// set scope id attribute for scoped CSS.
+
+// set the class
+
+// setimmediate attaches itself to the global object
+
+// setting _inactive to false here so that a render function can
+
+// shim for using process in browser
+
+// since dynamic options merging is pretty slow, and none of the
+
+// since the default value is a fresh copy,
+
+// since the watcher's initial patch may call $forceUpdate (e.g. inside child
+
+// skip all element-related modules except for ref (#3455)
+
+// skip the update if old and new VDOM state is the same.
+
+// slot props are camelized
+
+// slot target
+
+// slot="xxx"
+
+// smaller than it, it means the event is using a hi-res timestamp,
+
+// so it gets processed during parent component patch.
+
+// so that the transition module can hand over the control to the directive
+
+// so that we get proper render context inside it.
+
+// so we used some reserved tokens during compile.
+
+// some property updates can throw
+
+// specific event
+
+// specific handler
+
+// stabilize the subscriber list first
+
+// start at index 1 to avoid re-invoking component mounted hook
+
+// start enter transition
+
+// starting reference
+
+// static props are already proxied on the component's prototype
+
+// static style is pre-processed into an object during compilation
+
+// statically analyzing the template at compile time.
+
+// store normalized style under a different key for next diff
+
+// store value as _value as well since
+
+// structural directives
+
+// super option changed,
+
+// support .foo shorthand syntax for the .prop modifier
+
+// support for compiled functional template
+
+// support single function children as default scoped slot
+
+// switching focus before confirming composition choice
+
+// tag token
+
+// teardown watchers
+
+// technically allowfullscreen is a boolean attribute for <iframe>,
+
+// text
+
+// that cannot be circumvented (e.g. #7109, #7153, #7546, #7834, #8109).
+
+// that should not be matched to match.
+
+// the Vue instances at extension time, on the extended prototype. This
+
+// the context vm passed in is a functional context as well.
+
+// the delayed leave may have already been cancelled
+
+// the following are added in 2.6
+
+// the generated code of all the slot contents.
+
+// the information will be used for async server-rendering and hydration.
+
+// the object here.
+
+// the only target envs that have right/middle clicks.
+
+// the raw prop value was also undefined from previous render,
+
+// the result of another mergeOptions call.
+
+// the root of the child tree
+
+// the solution is simple: we save the timestamp when a handler is attached,
+
+// the whole point is ensuring the v-model callback gets called before
+
+// them unless you are aware of the risk.
+
+// there doesn't seem to be a better way to do it.
+
+// these are also reactive so they may trigger child update if the child
+
+// these are reserved for web because they are directly compiled away
+
+// these keywords should not appear inside expressions, but operators like
+
+// these unary operators should not be used as property/method names
+
+// they need to be reactive so that HOCs using them are always updated
+
+// thing with Array.prototype.concat. It is guaranteed to be only 1-level deep
+
+// this also fixes the issue where some browsers e.g. iOS Chrome
+
+// this is a slot using the new v-slot syntax without scope. although it is
+
+// this is a somewhat expensive operation so we skip it
+
+// this is implemented as a special case to avoid the overhead
+
+// this is just a safety net in case event.timeStamp is unreliable in
+
+// this is necessary for SSR hydration because text nodes are
+
+// this is technically browser-specific, but at least for now browsers are
+
+// this is used to identify the "base" constructor to extend all plain-object
+
+// this needs to be lazy-evaled because vue may be required before
+
+// timestamp can either be hi-res (relative to page load) or low-res
+
+// to mutate it.
+
+// to string and cause the type check to miss.
+
+// to the data on the placeholder node.
+
+// transform component v-model data into props & events
+
+// transform component v-model info (value and callback) into
+
+// transition at this very moment, we make a clone of it and remove
+
+// tree management
+
+// turn code into functions
+
+// turn off all instance listeners.
+
+// two cases where extra normalization is needed:
+
+// typeof, instanceof and in are allowed
+
+// uid for batching
+
+// unlike a newly created component,
+
+// update $attrs and $listeners hash
+
+// update __vue__ reference
+
+// update base extend options
+
+// update child tree's parent
+
+// update listeners
+
+// update parent placeholder node element, recursively
+
+// update props
+
+// update vm's placeholder node without re-render
+
+// updated listeners
+
+// updated props
+
+// updates
+
+// use default namespace inside foreignObject
+
+// use getRealChild() to ignore abstract components e.g. keep-alive
+
+// use native Set when available.
+
+// used for static nodes and slot nodes because they may be reused across
+
+// used them during render
+
+// user-attached handlers.
+
+// user-written render functions.
+
+// v-bind
+
+// v-bind data wrap
+
+// v-bind dynamic argument wrap
+
+// v-bind with dynamic arguments must be applied using the same v-bind object
+
+// v-html and domProps: innerHTML
+
+// v-if with v-once should generate code like (a)?_m(0):_m(1)
+
+// v-on
+
+// v-on data wrap
+
+// v-once
+
+// v-once cached trees
+
+// v-slot on <template>
+
+// v-slot on component, denotes default slot
+
+// v8 likes predictible objects
+
+// validation and default values are handled in the child
+
+// via either native Promise.then or MutationObserver.
+
+// vue-router#1212
+
+// vue-server-renderer can set VUE_ENV
+
+// warn against non-factory defaults for Object & Array
+
+// warn against non-primitive key
+
+// warn if v-bind:value conflicts with v-model
+
+// warn invalid mode
+
+// warn multiple elements
+
+// we are only extracting raw values here.
+
+// we can reuse the same tree.
+
+// we divide the work into three loops to avoid mixing DOM reads and writes
+
+// we have a recursively passed down rm callback
+
+// we know it's MountedComponentVNode but flow doesn't
+
+// we need to do this before overwriting $options._renderChildren.
+
+// we set this to vm._watcher inside the watcher's constructor
+
+// we want to recursively retrieve the real component to be rendered
+
+// webpackBootstrap
+
+// well.
+
+// when parent component is patched.
+
+// when the value is the same, because the value may
+
+// when using Object.defineProperty, so we have to procedurally build up
+
+// when when somebody has screwed with setTimeout but no I.E. maddness
+
+// where `global.postMessage` means something completely different and can't be used for this purpose.
+
+// where microtasks have too high a priority and fire in between supposedly
+
+// with hand-written render functions / JSX. In such cases a full normalization
+
+// without getting yelled at by flow
+
+// work around Firefox's Object.prototype.watch...
+
+// work around IE bug when accessing document.activeElement in an iframe
+
+// work around flow
+
+// wrap a state change and reset it upon exiting the pre node.
+
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+
+// wrapper function for providing a more flexible interface
+
+// wtf flow?
+
+// {
+
+// {display: ["-webkit-box", "-ms-flexbox", "flex"]}
+
+// }
+
+// バイト値を16進文字列に変換
+
+// バイト配列を16進文字列に変換
+
+// バイト配列を文字列に変換
+
+// 文字列を16進文字列に変換
+
+// 文字列をバイト配列に変換
+
+//normal enviroments in sane situations
