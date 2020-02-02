@@ -1,3 +1,4 @@
+import Vue from 'vue'
 import {convertToDNA, isInvalidDNA, convertToLanguage} from './dna-converter';
 
 new Vue({

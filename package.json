@@ -20,5 +20,8 @@
     "terser-webpack-plugin": "^2.3.4",
     "webpack": "^4.41.5",
     "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "vue": "^2.6.11"
   }
 }
