@@ -17,6 +17,7 @@
     "gulp-uglify": "^3.0.2",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",
+    "terser-webpack-plugin": "^2.3.4",
     "webpack": "^4.41.5",
     "webpack-stream": "^5.2.1"
   }

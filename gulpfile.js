@@ -6,6 +6,9 @@ var imagemin = require('gulp-imagemin');
 var imageminPngquant = require("imagemin-pngquant");
 var imageminMozjpeg = require("imagemin-mozjpeg");
 var uglify = require('gulp-uglify');
+const webpackStream = require("webpack-stream");
+const webpack = require("webpack");
+const webpackConfig = require("./webpack.config");
 
 // 加工しないファイルをコピー
 gulp.task('copy', function(done) {
@@ -22,6 +25,12 @@ gulp.task('sass', function(done){
   gulp.src('./src/sass/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(gulp.dest('./dist/css'));
+  done();
+});
+
+gulp.task("webpack", function(done){
+  webpackStream(webpackConfig, webpack)
+    .pipe(gulp.dest("./dist/js"));
   done();
 });
 
@@ -63,6 +72,6 @@ gulp.task('imagemin', function(done){
   done();
 });
 
-gulp.task('default', gulp.series('copy', 'sass', 'jsmin', 'imagemin'), function(done) {
+gulp.task('default', gulp.series('copy', 'sass', 'webpack', 'imagemin'), function(done) {
   done();
 });
