@@ -9,7 +9,7 @@ const webpackStream = require("webpack-stream");
 const webpack = require("webpack");
 const webpackConfig = require("./webpack.config");
 
-var dist = './pages';
+var dist = './docs';
 
 // 加工しないファイルをコピー
 gulp.task('copy', function(done) {
