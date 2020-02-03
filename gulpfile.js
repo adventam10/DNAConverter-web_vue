@@ -5,10 +5,11 @@ var changed  = require('gulp-changed');
 var imagemin = require('gulp-imagemin');
 var imageminPngquant = require("imagemin-pngquant");
 var imageminMozjpeg = require("imagemin-mozjpeg");
-var uglify = require('gulp-uglify');
 const webpackStream = require("webpack-stream");
 const webpack = require("webpack");
 const webpackConfig = require("./webpack.config");
+
+var dist = './pages';
 
 // 加工しないファイルをコピー
 gulp.task('copy', function(done) {
@@ -16,7 +17,7 @@ gulp.task('copy', function(done) {
     [ 'src/*.html', 'src/img/favicon/favicon.ico'],
     { base: 'src' }
   )
-  .pipe(gulp.dest('dist'));
+  .pipe(gulp.dest(dist));
   done();
 });
 
@@ -24,29 +25,21 @@ gulp.task('copy', function(done) {
 gulp.task('sass', function(done){
   gulp.src('./src/sass/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest(dist + '/css'));
   done();
 });
 
 gulp.task("webpack", function(done){
   webpackStream(webpackConfig, webpack)
-    .pipe(gulp.dest("./dist/js"));
+    .pipe(gulp.dest(dist + '/js'));
   done();
-});
-
-// js圧縮
-gulp.task('jsmin', function(done){
-    gulp.src('./src/js/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('./dist/js'));
-    done();
 });
 
 // 画像圧縮
 // 圧縮前と圧縮後のディレクトリを定義
 var paths = {
   srcDir : 'src',
-  dstDir : 'dist'
+  dstDir : dist
 };
 
 var imageminOption = [
@@ -66,7 +59,7 @@ gulp.task('imagemin', function(done){
   var srcGlob = paths.srcDir + '/**/*.+(jpg|jpeg|png|gif|svg)';
   var dstGlob = paths.dstDir;
   gulp.src(srcGlob)
-    .pipe(changed( dstGlob )) //差分のみ圧縮
+    .pipe(changed(dstGlob)) //差分のみ圧縮
     .pipe(imagemin(imageminOption))
     .pipe(gulp.dest(dstGlob));
   done();
