@@ -1,6 +1,6 @@
 # DNAConverter-web_vue
-[Webページ](http://adventam10.html.xdomain.jp/dna/)
-[Webページ(https!!!)](https://adventam10.github.io/DNAConverter-web_vue/)
+* [Webページ](http://adventam10.html.xdomain.jp/dna/)
+* [Webページ(https!!!)](https://adventam10.github.io/DNAConverter-web_vue/)
 
 ## 環境
 * サーバー  
